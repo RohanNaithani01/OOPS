@@ -13,5 +13,14 @@ public class Main {
 
         c1.drive();
 
+        Employee employee=new Employee();
+
+        employee.setName("Rohan");
+        employee.setSalary(100000);
+
+        System.out.println(employee.getName());
+        System.out.println(employee.getsalary());
+
+        employee.showDetails();
     }
 }
