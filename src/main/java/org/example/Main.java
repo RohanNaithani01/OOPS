@@ -27,5 +27,9 @@ public class Main {
         System.out.println(obj1.getName());
         System.out.println(obj1.getBalance());
 
+        Account obj2= new Account(obj1);
+
+        System.out.println(obj2.getName());
+        System.out.println(obj2.getBalance());
     }
 }

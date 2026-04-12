@@ -23,4 +23,9 @@ public class Account {
         return balance;
     }
 
+    //Copy Constructor
+    public Account(Account account){
+        this(account.getName(), account.getBalance());
+    }
+
 }
