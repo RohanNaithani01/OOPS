@@ -15,9 +15,7 @@ public class Employee {
         this.name=name;
     }
 
-    public void setSalary(int salary){
-        this.salary=salary;
-    }
+
 
     public void showDetails(){
         System.out.println(name);
