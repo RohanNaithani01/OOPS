@@ -1,35 +1,80 @@
 package org.example;
 
 public class Main {
-    public static void main(String[] args){
-//        Car c1=new Car();
-//        c1.carBrand="Tata";
-//        c1.carColor="Black";
-//        c1.carSpeed=120;
-//
-//        System.out.println(c1.carBrand);
-//        System.out.println(c1.carColor);
-//        System.out.println(c1.carSpeed);
-//
-//        c1.drive();
-//
-//        Employee employee=new Employee();
-//
-//        employee.setName("Rohan");
-//        employee.setSalary(100000);
-//
-//        System.out.println(employee.getName());
-//        System.out.println(employee.getsalary());
-//
-//        employee.showDetails();
+    public static void main(String[] args) {
 
-        Account obj1=new Account("Rohan", 234000);
-        System.out.println(obj1.getName());
-        System.out.println(obj1.getBalance());
+//        Student student = new Student("Rohan");
+//        student.printStudentName();
+//        student.printSchoolName();
+        Parent parent=new Parent("Anil","Rohan");
+        parent.printParentName();
+        parent.printStudentName();
+        parent.printSchoolName();
+        Teacher teacher=new Teacher("Rohit","Math");
+        Student student=new Student("Rohan");
+        teacher.printTeacherInfo();
+        teacher.printSchoolName();
+        student.printSchoolName();
+        student.demo();
 
-        Account obj2= new Account(obj1);
-
-        System.out.println(obj2.getName());
-        System.out.println(obj2.getBalance());
     }
 }
+class School {
+    private String name;
+
+    School() {
+        name = "DPS";
+    }
+
+    void printSchoolName() {
+        System.out.println("School name: " + name);
+    }
+    void demo(){
+        System.out.println("This is a demo");
+    }
+}
+
+class Student extends School {
+    private String name;
+
+    Student(String name) {
+        this.name = name;
+    }
+
+    void printStudentName() {
+        System.out.println("Student name: " + name);
+    }
+    @Override
+    void demo(){
+        super.demo();
+        System.out.println("I dont like school's demo");
+    }
+
+}
+
+class Parent extends Student {
+    private String name;
+
+    Parent(String name, String studentName) {
+        super(studentName);
+        this.name = name;
+    }
+
+    void printParentName() {
+        System.out.println("Parent name: " + name);
+    }
+}
+
+class Teacher extends School{
+    private String name;
+    private String subjectName;
+    Teacher(String name, String subjectName){
+        this.name=name;
+        this.subjectName=subjectName;
+    }
+    void printTeacherInfo(){
+        System.out.println("Name: "+name);
+        System.out.println("Subject Name: "+ subjectName);
+    }
+        }
+
