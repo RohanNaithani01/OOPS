@@ -9,7 +9,7 @@ public class TShirt extends Product{
             this.size=size;
             this.color=color;
     }
-
+@Override
     void displayDetails(){
         System.out.println("Size: "+ size);
         System.out.println("color: "+color);

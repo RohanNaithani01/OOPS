@@ -9,6 +9,7 @@ public class Product {
         this.category=category;
         this.price=price;
     }
+
     void displayDetails(){
         System.out.println("Name: "+name);
         System.out.println("Price: "+price);
