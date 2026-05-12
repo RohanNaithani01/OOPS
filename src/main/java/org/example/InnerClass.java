@@ -8,7 +8,6 @@ class outerClass{
             System.out.println("Inner Class executed "+ val);
         }
     }
-
 }
 public class InnerClass {
     public static void main(String[] args) {
